@@ -11,18 +11,21 @@ module.exports = {
         .setRequired(true)
     ),
   async execute(interaction) {
-    const amount =  interaction.options.getInteger('amount');
-    
-    if (amount < 1 || amount > 99){
-        return interaction.reply({content: 'You need to input a number between 1 and 99.', ephemeral: true})
+    const amount = interaction.options.getInteger("amount");
+
+    if (amount < 1 || amount > 99) {
+      return interaction.reply({
+        content: "You need to input a number between 1 and 99.",
+        ephemeral: true,
+      });
     }
-    await interaction.channel.bulkDelete(amount, true).catch(error =>{
-        console.error(error);
-        interaction.reply("There was an error deleting messages");
+    await interaction.channel.bulkDelete(amount, true).catch((error) => {
+      console.error(error);
+      interaction.reply("There was an error deleting messages");
     });
     // interaction.user is the object representing the User who ran the command
     // interaction.member is the GuildMember object, which represents the user in the specific guild
 
-    return interaction.reply(`Sucessfully pruned ${amount} messages.`)
+    await interaction.reply(`Sucessfully pruned ${amount} messages.`);
   },
 };
