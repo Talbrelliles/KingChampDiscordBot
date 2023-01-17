@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "name": "Taimase",
+      "level": 1,
+      "multiplier": 1
+    },
+    {
+      "name": "Blwaze",
+      "level": 1,
+      "multiplier": 1
+    },
+    {
+      "name": "Dylgib",
+      "level": 1,
+      "multiplier": 1
+    },
+    {
+      "name": "Agent Skinner",
+      "level": 1,
+      "multiplier": 1
+    }
+  ],
+  "banList": [
+    { "name": "cringe", "power": 2 },
+    { "name": "gaming", "power": 2 },
+    { "name": "ree", "power": 4 },
+    { "name": "epic", "power": 2 },
+    { "name": "moment", "power": 2 },
+    { "name": "fortnite", "power": 5 },
+    { "name": "poggers", "power": 3 },
+    { "name": "bars", "power": 3 },
+    { "name": "no kizzy", "power": 3 },
+    { "name": "bruh", "power": 3 },
+    { "name": "sans", "power": 4 },
+    { "name": "undertale", "power": 4 }
+  ]
+}
