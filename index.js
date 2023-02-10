@@ -9,7 +9,14 @@ const {
 } = require("discord.js");
 const { token } = require("./config.json");
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+  ],
+});
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, "commands");
@@ -39,3 +46,7 @@ for (const file of eventFiles) {
 }
 
 client.login(token);
+
+client.on(Event.MessageCreate, (message) => {
+
+})
